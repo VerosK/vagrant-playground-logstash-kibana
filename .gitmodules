@@ -1,0 +1,9 @@
+[submodule "roles/goozbach.EPEL"]
+	path = roles/goozbach.EPEL
+	url = https://github.com/goozbach-ansible/role-epel
+[submodule "roles/common"]
+	path = roles/common
+	url = git@github.com:VerosK/ansible-common.git
+[submodule "roles/elasticsearch"]
+	path = roles/elasticsearch
+	url = git@github.com:VerosK/ansible-elasticsearch.git
