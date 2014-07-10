@@ -1,0 +1,20 @@
+---
+- hosts: CentOS
+  sudo_user: root
+  roles:
+  - { role: goozbach.EPEL, epel_enabled: 0 }
+
+- name: Common features for all systems
+  hosts: all
+  user: root
+  roles:
+    - common
+
+- name: Install logstash
+  hosts: logstash
+  user: root
+  vars:
+     elasticsearch_cluster_name: logstash
+     elasticsearch_ip: 127.0.0.1
+  roles:
+     - { role: elasticsearch, tags: elasticsearch }

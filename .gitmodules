@@ -4,6 +4,3 @@
 [submodule "roles/common"]
 	path = roles/common
 	url = git@github.com:VerosK/ansible-common.git
-[submodule "roles/elasticsearch"]
-	path = roles/elasticsearch
-	url = git@github.com:VerosK/ansible-elasticsearch.git
