@@ -43,10 +43,12 @@ Vagrant.configure("2") do |config|
             ansible.playbook = "site.yml"
             ansible.host_key_checking = false
             ansible.verbose = "v"
-            #ansible.tags = 'kibana' # apply
+            #ansible.tags = 'logstash' # apply only selected tags
             ansible.groups = {
             'logstash' => MACHINES.keys
             }
+            # if you want to fire ansible on all machines at parallel, use this!
+            #ansible.limit = 'all'
           end
       end
   end
