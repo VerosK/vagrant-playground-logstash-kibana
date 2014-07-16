@@ -9,6 +9,12 @@
   user: root
   roles:
     - common
+  tasks:
+  - name: Update package
+    shell: apt-get update
+
+  - name: Install Apache
+    apt: name=apache2 state=installed
 
 - name: Install logstash
   hosts: logstash
@@ -21,3 +27,4 @@
      - { role: redis, tags: redis }
      - { role: logstash, tags: logstash,
             with_shipper: True, include_rsyslog: True }
+     - { role: kibana, tags: kibana, with_apache: True }

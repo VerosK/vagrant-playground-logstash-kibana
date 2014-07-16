@@ -13,3 +13,6 @@
 [submodule "roles/redis"]
 	path = roles/redis
 	url = git@github.com:VerosK/ansible-redis.git
+[submodule "roles/kibana"]
+	path = roles/kibana
+	url = https://github.com/verosk/ansible-kibana3

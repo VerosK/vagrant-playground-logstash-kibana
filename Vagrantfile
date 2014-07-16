@@ -43,7 +43,7 @@ Vagrant.configure("2") do |config|
             ansible.playbook = "site.yml"
             ansible.host_key_checking = false
             ansible.verbose = "v"
-            #ansible.tags = 'logstash' # apply only selected tags
+            #ansible.tags = 'kibana' # apply only selected tags
             ansible.groups = {
             'logstash' => MACHINES.keys
             }
