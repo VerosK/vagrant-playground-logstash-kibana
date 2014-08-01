@@ -12,9 +12,15 @@
   tasks:
   - name: Update package
     shell: apt-get update
+    when: ansible_os_family == "Debian"
 
   - name: Install Apache
     apt: name=apache2 state=installed
+    when: ansible_os_family == "Debian"
+
+  - name: Install Apache2
+    yum: name=httpd state=installed
+    when: ansible_os_family == "RedHat"
 
 - name: Install logstash
   hosts: logstash
